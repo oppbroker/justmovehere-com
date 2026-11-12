@@ -1,0 +1,34 @@
+name: Rename to index.html
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  rename:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Rename file
+        run: |
+          git config user.name "oppbroker"
+          git config user.email "zack.oppenheim@gmail.com"
+          git mv justmovehere-com.html index.html
+          git commit -m "Rename justmovehere-com.html to index.html"
+          git push
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
