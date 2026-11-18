@@ -328,10 +328,10 @@ body[data-current-view="home"] #neighborhoods .sub-back{display:none}
     </a>
     <nav class="nav-links" aria-label="Main">
       <a href="#fun">Fun Things To Do</a>
+      <a href="#newconstruction">New Construction</a>
       <a href="#food" data-goto-food>Eat Like a Local</a>
       <a href="#free" class="hide-m">Free &amp; Cheap</a>
       <a href="#events" class="hide-m">Events</a>
-      <a href="#newconstruction" class="hide-m">New Construction</a>
       <a href="#move">Moving Here</a>
       <a class="cta" href="https://findsfloridahomes.com" target="_blank" rel="noopener">Search Homes</a>
     </nav>
@@ -355,7 +355,6 @@ body[data-current-view="home"] #neighborhoods .sub-back{display:none}
       <button type="button" data-slide="0" aria-current="true" aria-label="Scene 1: Intracoastal at golden hour with a yacht"><span class="bar"></span></button>
       <button type="button" data-slide="1" aria-current="false" aria-label="Scene 2: The Isles waterfront homes at sunset"><span class="bar"></span></button>
       <button type="button" data-slide="2" aria-current="false" aria-label="Scene 3: Marina and downtown skyline at sunset"><span class="bar"></span></button>
-      <button type="button" class="hero-pause" id="heroPause" aria-pressed="false">Pause the roll</button>
     </div>
   </div>
 </div>
@@ -1181,14 +1180,6 @@ body[data-current-view="home"] #neighborhoods .sub-back{display:none}
   function start(){ if(reduce || paused) return; stop(); timer = setInterval(function(){ show((idx+1)%slides.length); }, 6500); }
   function stop(){ if(timer){ clearInterval(timer); timer = null; } }
   dots.forEach(function(d){ d.addEventListener("click", function(){ show(parseInt(d.getAttribute("data-slide"),10)); start(); }); });
-  var pauseBtn = document.getElementById("heroPause");
-  if(reduce){ pauseBtn.textContent = "Photo roll paused for reduced motion"; pauseBtn.disabled = true; }
-  pauseBtn.addEventListener("click", function(){
-    paused = !paused;
-    pauseBtn.setAttribute("aria-pressed", paused ? "true" : "false");
-    pauseBtn.textContent = paused ? "Play the roll" : "Pause the roll";
-    if(paused){ stop(); } else { start(); }
-  });
   show(0); start();
 
   /* ---------- Move panels ---------- */
