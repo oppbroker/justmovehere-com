@@ -331,6 +331,17 @@
   .nc-compact .event p{font-size:14.5px}
   button.sub-back{font:inherit;background:none;border:0;cursor:pointer}
 body[data-current-view="home"] #neighborhoods .sub-back{display:none}
+
+.nc-detail-btn{display:inline-flex;align-items:center;gap:6px;margin-top:12px;min-height:44px;padding:10px 18px;border-radius:999px;border:1.5px solid var(--blue);background:transparent;color:var(--blue-deep);font:inherit;font-size:15px;font-weight:700;cursor:pointer}
+.nc-detail-btn:hover{background:var(--surface-2)}
+.nc-detail{margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+.nc-detail h4{font-size:16px;font-weight:800;margin:16px 0 6px}
+.nc-detail h4:first-child{margin-top:0}
+.nc-detail p{color:var(--ink-2);font-size:15px;margin-top:6px}
+.nc-detail ul{margin:6px 0 0;padding-left:20px;color:var(--ink-2);font-size:15px}
+.nc-detail li{margin-top:4px}
+.nc-detail .nc-source{font-size:13px;color:var(--ink-3)}
+.nc-detail-cta{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--blue-deep);text-decoration:none;min-height:44px}
 </style>
 </head>
 <body>
@@ -746,7 +757,22 @@ body[data-current-view="home"] #neighborhoods .sub-back{display:none}
       <h3 class="group-head">Pompano Beach</h3>
       <div class="rhythm nc-compact">
       <article class="event"><h3>Waldorf Astoria Residences Pompano Beach</h3><p>Under construction from $2.65M, completing summer 2027, and 90% sold. A 28-story oceanfront tower with 92 residences, about 200 feet of private beachfront, and more than 35,000 sq ft of amenities.</p></article>
-      <article class="event"><h3>The Ritz-Carlton Residences Pompano Beach</h3><p>Near completion, with two developer residences left: E401 at $6,362,000 and E501 at $6,640,000, each 4 bedrooms, 5 baths, and 3,804 sq ft. Two owners-only towers by Fortune International Group and Oak Capital, designed by Piero Lissoni and Revuelta Architecture, on a 4.6-acre ocean-to-Intracoastal site with a private marina, beach club, and pickleball; HOA $1.50 per sq ft.</p></article>
+      <article class="event"><h3>The Ritz-Carlton Residences Pompano Beach</h3><p>Near completion, with two developer residences left: E401 at $6,362,000 and E501 at $6,640,000, each 4 bedrooms, 5 baths, and 3,804 sq ft. Two owners-only towers by Fortune International Group and Oak Capital, designed by Piero Lissoni and Revuelta Architecture, on a 4.6-acre ocean-to-Intracoastal site with a private marina, beach club, and pickleball; HOA $1.50 per sq ft.</p><button type="button" class="nc-detail-btn" data-nc-detail="ritz-pompano" aria-expanded="false" aria-controls="nc-detail-ritz-pompano">See details</button>
+<div class="nc-detail" id="nc-detail-ritz-pompano" hidden>
+<h4>Available now: two developer residences left</h4>
+<ul>
+<li><strong>E401</strong> &mdash; $6,362,000 ($1,672 per sq ft)</li>
+<li><strong>E501</strong> &mdash; $6,640,000 ($1,746 per sq ft)</li>
+</ul>
+<p>Each is 4 bedrooms, 5 baths, 3,804 sq ft.</p>
+<h4>The project</h4>
+<p>1380 S Ocean Blvd, Pompano Beach, FL 33062. A collaboration between Fortune International Group and Oak Capital, designed by Piero Lissoni and Revuelta Architecture International, on nearly five acres of oceanfront and Intracoastal waterfront. Solely residential, with a private marina and beach club, and service managed by The Ritz-Carlton Hotel Co.</p>
+<p>HOA $1.50 per sq ft.</p>
+<h4>Sales team</h4>
+<p>Michelle Nunez, Sales Executive, Fortune Development Sales &mdash; (954) 732-0505<br>Harvey Daniels, Vice President of Development Sales, Fortune International Group &mdash; (786) 253-6562</p>
+<p class="nc-source">Details from the developer sales team, November 2026. Pricing and availability change fast &mdash; we confirm the latest from the sales gallery before you decide anything.</p>
+<p><a class="nc-detail-cta" href="mailto:Zack@OppenheimRealty.com?subject=The%20Ritz-Carlton%20Residences%20Pompano%20Beach">Ask Zachary about this project &rarr;</a></p>
+</div></article>
       <article class="event"><h3>Salato Pompano Beach</h3><p>Completed in 2026, from $2.4M. A boutique oceanfront condo with 40 three-bedroom residences including 6 penthouses, steps from the pier and Fishing Village, with 14-foot-deep terraces, semi-private elevator entry, a dedicated beach concierge, and more than 20,000 sq ft of amenities including a lap pool, spa, and Swedish sauna.</p></article>
       <article class="event"><h3>W Pompano Beach Hotel &amp; Residences</h3><p>Pre-construction: suites from $775K and residences from $3.1M, delivery targeted 2029. A 24-story oceanfront condo-hotel beside the pier with 77 residences, 296 hotel suites, and a 60,000 sq ft beach club. Resort units come fully furnished, with optional hotel management for short-term stays.</p></article>
       <article class="event"><h3>Armani/Casa Residences Pompano Beach</h3><p>Pre-construction from $5M, targeted 2028. Two 19-story towers with just 28 full-floor residences plus two Sky Villas, designed by Armani/Casa.</p></article>
@@ -759,15 +785,95 @@ body[data-current-view="home"] #neighborhoods .sub-back{display:none}
       <button type="button" class="sub-back nc-back" data-nc-back>&larr; All cities</button>
       <h3 class="group-head">Fort Lauderdale</h3>
       <div class="rhythm nc-compact">
-      <article class="event"><h3>Ombelle Fort Lauderdale</h3><p>Under construction from the $500,000s, completing 2028. Two furnished-residence towers in Flagler Village with more than 100,000 sq ft of amenities, including the first Equinox Fitness Club in Fort Lauderdale.</p></article>
+      <article class="event"><h3>Ombelle Fort Lauderdale</h3><p>Under construction from the $500,000s, completing 2028. Two furnished-residence towers in Flagler Village with more than 100,000 sq ft of amenities, including the first Equinox Fitness Club in Fort Lauderdale.</p><button type="button" class="nc-detail-btn" data-nc-detail="ombelle" aria-expanded="false" aria-controls="nc-detail-ombelle">See details</button>
+<div class="nc-detail" id="nc-detail-ombelle" hidden>
+<h4>Sales gallery</h4>
+<p>315 NE 3rd Ave #CU103, Fort Lauderdale, FL 33301<br>954-999-0991<br><a href="mailto:nelly@ownombelle.com">nelly@ownombelle.com</a> &middot; OwnOmbelle.com</p>
+<p>Sales Gallery Coordinator: Nelly Gaziyan.</p>
+<h4>Full details</h4>
+<p>We asked the sales team for the full fact sheet, current pricing and availability, floor plans, amenities, and delivery timeline. Full details coming soon. Ask us and we will confirm the latest from the sales gallery before you decide anything.</p>
+<p class="nc-source">Sales gallery contact shared by the developer team, November 2026.</p>
+<p><a class="nc-detail-cta" href="mailto:Zack@OppenheimRealty.com?subject=Ombelle%20Fort%20Lauderdale">Ask Zachary about this project &rarr;</a></p>
+</div></article>
       <article class="event"><h3>Viceroy Residences Fort Lauderdale</h3><p>Pre-construction from $760K. A 45-story branded tower with 251 residences between Las Olas and Flagler Village, with two pools and a 46th-floor sky lounge.</p></article>
-      <article class="event"><h3>Andare Residences by Pininfarina</h3><p>Under construction from $2.2M, completing end of 2027. A 45-story Pininfarina-designed tower by Related Group directly on Las Olas with 163 two- to four-bedroom residences, five per floor with private elevator entry; over 75% sold. Amenities span about 35,000 sq ft across three levels, including three pools and a spa; maintenance $1.50 per sq ft.</p></article>
-      <article class="event"><h3>Sixth&amp;Rio</h3><p>In final construction, from the $800Ks, delivering Q4 2026. A boutique 8-story condo with 94 one- to four-bedroom residences on the New River at the edge of Rio Vista, with a rooftop infinity-edge pool and a Water Trolley dock steps away. Limited residences remaining.</p></article>
-      <article class="event"><h3>3000 Waterside</h3><p>Pre-construction from $999,999 to $3,366,320, Q2 2028. An 18-story Intracoastal condo in Coral Ridge by Claridge Homes with 129 two- to four-bedroom residences from 1,118 to 2,660 sq ft, private boat docks with dockage at $500,000, a rooftop oasis, and an on-site restaurant.</p></article>
+      <article class="event"><h3>Andare Residences by Pininfarina</h3><p>Under construction from $2.2M, completing end of 2027. A 45-story Pininfarina-designed tower by Related Group directly on Las Olas with 163 two- to four-bedroom residences, five per floor with private elevator entry; over 75% sold. Amenities span about 35,000 sq ft across three levels, including three pools and a spa; maintenance $1.50 per sq ft.</p><button type="button" class="nc-detail-btn" data-nc-detail="andare" aria-expanded="false" aria-controls="nc-detail-andare">See details</button>
+<div class="nc-detail" id="nc-detail-andare" hidden>
+<h4>Pricing and residences</h4>
+<p>From $2.2M. 163 residences in a 45-story tower by Related Group, designed by Pininfarina, at 521 East Las Olas Blvd. Two- to four-bedroom residences, only 5 per floor, with private elevator access and entry foyer, private terraces, flow-through layouts, and Italian finishes. Construction is under way and the project is over 75% sold.</p>
+<h4>Deposits and completion</h4>
+<p>15% at contract, 15% in 120 days, 10% at top-off (first quarter 2027), balance at completion, estimated end of 2027. Maintenance $1.50 per sq ft.</p>
+<h4>Amenities &mdash; about 35,000 sq ft across three levels</h4>
+<ul>
+<li>Rooftop pool with stunning water views</li>
+<li>Holistic wellness spa with salt, sauna, steam, and massage treatment rooms, plus hot and cold plunge pools</li>
+<li>Three swimming pools with private cabanas, an expansive sun deck, and food and beverage services</li>
+<li>State-of-the-art fitness studio</li>
+</ul>
+<p>Steps from Las Olas boutiques, art galleries, dining, and sidewalk cafes.</p>
+<h4>Sales team</h4>
+<p>Gigi Giusti &mdash; gigi@andareresidences.com. In-person and Zoom presentations available.</p>
+<p class="nc-source">Details from the developer sales team, November 2026. Pricing and availability change fast &mdash; we confirm the latest from the sales gallery before you decide anything.</p>
+<p><a class="nc-detail-cta" href="mailto:Zack@OppenheimRealty.com?subject=Andare%20Residences%20by%20Pininfarina">Ask Zachary about this project &rarr;</a></p>
+</div></article>
+      <article class="event"><h3>Sixth&amp;Rio</h3><p>In final construction, from the $800Ks, delivering Q4 2026. A boutique 8-story condo with 94 one- to four-bedroom residences on the New River at the edge of Rio Vista, with a rooftop infinity-edge pool and a Water Trolley dock steps away. Limited residences remaining.</p><button type="button" class="nc-detail-btn" data-nc-detail="sixthrio" aria-expanded="false" aria-controls="nc-detail-sixthrio">See details</button>
+<div class="nc-detail" id="nc-detail-sixthrio" hidden>
+<h4>Pricing and residences</h4>
+<p>From the $800Ks. A boutique collection of 94 luxury residences on the New River, with one- to four-bedroom floor plans. Limited residences remaining.</p>
+<h4>Delivery</h4>
+<p>In final stages of construction, delivering Q4 2026.</p>
+<h4>Location</h4>
+<p>Riverfront on the New River at the edge of Rio Vista, with walkable access to Las Olas.</p>
+<h4>Sales team</h4>
+<p>Melissa Nichols, Sales Executive &mdash; (954) 817-2577, melissa@sixthandrio.com. Sales gallery: 1800 E Las Olas Blvd.</p>
+<p class="nc-source">Details from the developer sales team, November 2026. Pricing and availability change fast &mdash; we confirm the latest from the sales gallery before you decide anything.</p>
+<p><a class="nc-detail-cta" href="mailto:Zack@OppenheimRealty.com?subject=Sixth%20%26%20Rio">Ask Zachary about this project &rarr;</a></p>
+</div></article>
+      <article class="event"><h3>3000 Waterside</h3><p>Pre-construction from $999,999 to $3,366,320, Q2 2028. An 18-story Intracoastal condo in Coral Ridge by Claridge Homes with 129 two- to four-bedroom residences from 1,118 to 2,660 sq ft, private boat docks with dockage at $500,000, a rooftop oasis, and an on-site restaurant.</p><button type="button" class="nc-detail-btn" data-nc-detail="waterside" aria-expanded="false" aria-controls="nc-detail-waterside">See details</button>
+<div class="nc-detail" id="nc-detail-waterside" hidden>
+<h4>Pricing and residences</h4>
+<p>From $999,999 to $3,366,320. 129 residences in an 18-story waterfront tower, with two-, three-, and four-bedroom floor plans from 1,118 to 2,660 sq ft, plus select penthouse residences with expansive terraces. Boat dockage $500,000.</p>
+<h4>Delivery and deposits</h4>
+<p>Groundbreaking scheduled for fall 2026; estimated delivery Q2 2028. Deposit schedule: 20% at signing, 10% at pouring of the 2nd floor, 5% at rooftop, balance at closing.</p>
+<h4>Finishes</h4>
+<p>Designer gourmet kitchens with quartz countertops, European-style cabinetry, and a wine chiller. Primary bathrooms with floor-to-ceiling porcelain-clad walls and dual vanities with quartz tops. Expansive glass-framed private balconies and terraces.</p>
+<h4>Amenities</h4>
+<ul>
+<li>Rooftop oasis with outdoor kitchen, firepit, spa, and dog park</li>
+<li>Intracoastal pool deck with spa and outdoor kitchen</li>
+<li>State-of-the-art fitness center</li>
+<li>Spa level with treatment room, sauna, and steam room</li>
+<li>24-hour concierge services, self parking, and guest suites</li>
+<li>Full-service restaurant, open to the public</li>
+</ul>
+<h4>The project</h4>
+<p>3000 Oakland Park Blvd, Fort Lauderdale, FL 33306, by Claridge Homes &mdash; minutes from Fort Lauderdale Beach, Las Olas, and Fort Lauderdale International Airport. Sales gallery: 2844 E Oakland Park Blvd, Fort Lauderdale, FL 33306.</p>
+<h4>Sales team</h4>
+<p>Cindy Leventhal, Director of Sales &mdash; 954-459-4191, sales@3000waterside.com<br>Barry Levinson &mdash; 954-592-9339</p>
+<p class="nc-source">Details from the developer sales team, November 2026. Pricing and availability change fast &mdash; we confirm the latest from the sales gallery before you decide anything.</p>
+<p><a class="nc-detail-cta" href="mailto:Zack@OppenheimRealty.com?subject=3000%20Waterside">Ask Zachary about this project &rarr;</a></p>
+</div></article>
       <article class="event"><h3>Sage Intracoastal Residences</h3><p>Under construction from $2.9M, targeted late 2027. A boutique 28-story tower with 44 residences, two per floor, and about 200 feet of Intracoastal frontage.</p></article>
       <article class="event"><h3>Bungalow East</h3><p>Pre-construction from $2M. A boutique 14-story condo in North Beach Village, one block from the beach, with 34 residences and yacht club membership.</p></article>
       <article class="event"><h3>Selene Oceanfront Residences</h3><p>Completed in 2025 and move-in ready, final release from $2.69M. Two 26-story oceanfront towers on Fort Lauderdale Beach with 194 residences and two elevated pool terraces.</p></article>
-      <article class="event"><h3>The St. Regis Resort and Residences, Bahia Mar</h3><p>Pre-construction from $3M, completing Q4 2029. A $2 billion redevelopment of the 40-acre Bahia Mar site by Related Group, Tate Capital, and Rok Acquisitions: a 23-story tower with 80 three- and four-bedroom-plus-den residences of 2,600 to 3,550 sq ft from about $5M (HOA about $2.00 per sq ft), plus 106 furnished resort residences from about $3M (HOA about $1.80 per sq ft) that can be rented nightly.</p></article>
+      <article class="event"><h3>The St. Regis Resort and Residences, Bahia Mar</h3><p>Pre-construction from $3M, completing Q4 2029. A $2 billion redevelopment of the 40-acre Bahia Mar site by Related Group, Tate Capital, and Rok Acquisitions: a 23-story tower with 80 three- and four-bedroom-plus-den residences of 2,600 to 3,550 sq ft from about $5M (HOA about $2.00 per sq ft), plus 106 furnished resort residences from about $3M (HOA about $1.80 per sq ft) that can be rented nightly.</p><button type="button" class="nc-detail-btn" data-nc-detail="stregis" aria-expanded="false" aria-controls="nc-detail-stregis">See details</button>
+<div class="nc-detail" id="nc-detail-stregis" hidden>
+<h4>The project</h4>
+<p>801 Seabreeze Blvd, Fort Lauderdale, FL 33316. A $2 billion vision by Related Group, Tate Capital, and Rok Acquisitions on a 40-acre waterfront enclave with beaches, Intracoastal waterways, and a marina, in the yachting capital of the world. 186 residences in total, blending private residences with full-service hospitality. Groundbreaking 2027, top-off 2028, estimated completion Q4 2029.</p>
+<h4>Private Residences Tower</h4>
+<p>23-story boutique tower with 80 residences, 4 per floor. Three-bedroom-plus-den and four-bedroom-plus-den layouts, 2,600 to 3,550 sq ft, from about $5M. HOA about $2.00 per sq ft. Two penthouses with wraparound terraces and 4 parking spaces. Private elevators and foyers, 10-ft ceilings, Wolf and Sub-Zero appliances, Kallista and Dornbracht fixtures, Italian marble bathrooms, freestanding tubs, and walk-in closets. Two assigned parking spaces per residence.</p>
+<h4>Tower amenities &mdash; 37,000 sq ft</h4>
+<p>24/7 concierge and attended lobby, private beach club (1,800 linear ft), pool, hot tubs, luxury spa, and fitness center. Pickleball, bicycles, and children/teen room. Library, media room, billiards, and sports simulator.</p>
+<h4>Bahia Club &mdash; owners&rsquo; private park, exclusively for tower residences</h4>
+<p>Lap pool, tennis courts, padel, wellness green, outdoor fitness pavilion, fire pits, shaded lounge areas, and a summer kitchen.</p>
+<h4>Residences at the Resort</h4>
+<p>106 furnished units starting on the 10th floor. Two- to three-bedroom residences plus four-bedroom multi-level penthouses, with private elevators, terraces, penthouse pools, and summer kitchens, and the same luxury finishes and appliances as the tower. Valet parking only. From about $3M. HOA about $1.80 per sq ft. Resort residences can be rented nightly, weekly, or long-term, with access to hotel services, events, and amenities, plus a dedicated resident app.</p>
+<h4>Resort amenities &mdash; 65,000 sq ft</h4>
+<p>Private lobby, lounge, and elevators. Two resort-style pools, fitness center, and 5,000 sq ft spa. Restaurants, poolside bar and grill, and cognac and tea room. Beach club access, children&rsquo;s club, meeting rooms, and ballrooms. Butler service, house cars, and 2 acres of green space.</p>
+<h4>Sales team</h4>
+<p>Deborah Wiltshire &mdash; deborah@srrbahiamar.com</p>
+<p class="nc-source">Details from the developer sales team, November 2026. Pricing and availability change fast &mdash; we confirm the latest from the sales gallery before you decide anything.</p>
+<p><a class="nc-detail-cta" href="mailto:Zack@OppenheimRealty.com?subject=The%20St.%20Regis%20Resort%20and%20Residences%2C%20Bahia%20Mar">Ask Zachary about this project &rarr;</a></p>
+</div></article>
       <article class="event"><h3>The Ritz-Carlton Residences, Fort Lauderdale Beach</h3><p>Pre-construction from $3.4M, 2029. A boutique dual-tower branded condo with 83 residences between the Atlantic and the Intracoastal, with a 75-foot lap pool and spa.</p></article>
       <article class="event"><h3>Pier Sixty-Six Residences</h3><p>Completed in 2025, move-in ready from $3.85M. 88 residences within a 32-acre resort and marina with a 164-slip superyacht marina, 12 restaurants and bars, and a 13,000 sq ft spa.</p></article>
       <article class="event"><h3>Riva Residenze</h3><p>Pre-construction from $3.5M. The world’s first yacht-branded condominium: a 20-story tower with 36 residences on 200 feet of Marina District waterfront, with a private marina.</p></article>
@@ -1590,5 +1696,22 @@ body[data-current-view="home"] #neighborhoods .sub-back{display:none}
   });
 })();
 </script>
+<script>
+(function(){
+  "use strict";
+  document.addEventListener("click", function(e){
+    var t = e.target;
+    var b = (t && t.closest) ? t.closest("[data-nc-detail]") : null;
+    if(!b){ return; }
+    var panel = document.getElementById("nc-detail-" + b.getAttribute("data-nc-detail"));
+    if(!panel){ return; }
+    var opening = panel.hasAttribute("hidden");
+    if(opening){ panel.removeAttribute("hidden"); } else { panel.setAttribute("hidden", ""); }
+    b.setAttribute("aria-expanded", opening ? "true" : "false");
+    b.textContent = opening ? "Hide details" : "See details";
+  });
+})();
+</script>
+
 </body>
 </html>
